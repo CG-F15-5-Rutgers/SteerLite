@@ -19,6 +19,7 @@
 #include "SteerLib.h"
 // #include "SimpleAgent.h"
 // #include "SocialForcesAIModule.h"
+#include "planning/AStarPlanner.h"
 #include "SocialForces_Parameters.h"
 
 
@@ -109,6 +110,7 @@ class SocialForcesAgent : public SteerLib::AgentInterface
         void updateMidTermPath();
         bool hasLineOfSightTo(Util::Point point);
 
+        void computePath();
 
         void calcNextStep(float dt);
         Util::Vector calcRepulsionForce(float dt);
@@ -126,6 +128,7 @@ class SocialForcesAgent : public SteerLib::AgentInterface
         std::vector<Util::Point> _midTermPath;
         // holds the location of the best local target along the midtermpath
         Util::Point _currentLocalTarget;
+        SteerLib::AStarPlanner aStarPlanner;
 
         friend class SocialForcesAIModule;
 

@@ -18,15 +18,15 @@
 #define PREFERED_SPEED 1.33 // TODO not added to parameters yet.
 
 
-#define ACCELERATION 0.5 // = v/A
+#define ACCELERATION 0.1 // = v/A
 #define PERSONAL_SPACE_THRESHOLD 0.3 // not defined in HiDAC papaer
 #define AGENT_REPULSION_IMPORTANCE 0.3 // in HiDAC
 #define QUERY_RADIUS 3.0f // not defined in paper
-#define BODY_FORCE 1500.0f // K (big K) 120000 / 80
-#define AGENT_BODY_FORCE 1500.0f
-#define SLIDING_FRICTION_FORCE 3000.0f // k (small k) 240000 / 80 = 3000
-#define AGENT_B 0.08f // inverse proximity force importance
-#define AGENT_A 25.0f // 2000 / 80 Yep its just called A... inverse proximity force importance
+#define BODY_FORCE 2000.0f // K (big K) 120000 / 80  originally 100
+#define AGENT_BODY_FORCE 2000.0f
+#define SLIDING_FRICTION_FORCE 300.0f // k (small k) 240000 / 80 = 3000
+#define AGENT_B 0.9f // inverse proximity force importance
+#define AGENT_A 50.0f // 2000 / 80 Yep its just called A... inverse proximity force importance
 #define WALL_B 0.08f //  inverse proximity force importance
 #define WALL_A 25.0f //  proximity force importance
 #define FURTHEST_LOCAL_TARGET_DISTANCE 45
